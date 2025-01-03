@@ -96,7 +96,14 @@
     color: rgba(22, 24, 35, 0.34);
 }
 
-// custom
+.more-btn {
+    font-size: 2rem;
+    margin-left: 28px;
+    padding: 8px;
+    background-color: transparent;
+}
+
+// custom button
 .custom-login {
     color: red;
 }
