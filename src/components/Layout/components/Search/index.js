@@ -25,7 +25,7 @@ function Search() {
     const inputRef = useRef();
 
     useEffect(() => {
-        if (!debounced.trim()) {
+        if (!debounced) {
             setSearchResult([]);
             return;
         }
@@ -48,6 +48,13 @@ function Search() {
 
     const handleHideResult = () => {
         setShowResult(false);
+    };
+
+    const handleChange = (e) => {
+        const searchInputValue = e.target.value;
+        if (!searchInputValue.startsWith(' ')) {
+            setSearchValue(searchInputValue.trimStart());
+        }
     };
 
     return (
@@ -73,7 +80,7 @@ function Search() {
                         ref={inputRef}
                         placeholder="Tìm kiếm"
                         spellCheck={false}
-                        onChange={(e) => setSearchValue(e.target.value.trimStart())}
+                        onChange={handleChange}
                         onFocus={() => setShowResult(true)}
                     />
                     {searchValue && !loading && (
