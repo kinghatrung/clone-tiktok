@@ -11,6 +11,11 @@
     justify-content: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .inner {
     height: 100%;
     padding: 0 var(--default-layout-horizontal-spacer);
@@ -89,6 +94,9 @@
 }
 
 .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: var(--search-button-width);
     height: 100%;
     border-top-right-radius: var(--search-border-radius);
@@ -117,8 +125,11 @@
 }
 
 .action-btn {
+    display: flex;
+    align-items: center;
     background-color: transparent;
-    padding: 4px 22px;
+    padding: 4px 8px;
+    margin: 0 12px;
     font-size: 2rem;
     cursor: pointer;
 }

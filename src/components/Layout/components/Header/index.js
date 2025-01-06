@@ -2,37 +2,44 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faArrowRightFromBracket,
     faCircleXmark,
     faEllipsisVertical,
-    faGear,
-    faHouseFlag,
-    faLanguage,
     faMagnifyingGlass,
     faPlus,
     faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
-import { faMoon, faCircleQuestion, faMessage, faUser } from '@fortawesome/free-regular-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
 import styles from './Header.module.scss';
-import images from '~/assets/images';
+import Image from '~/components/Image';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import {
+    CoinIcon,
+    LogoIcon,
+    MessageIcon,
+    UserIcon,
+    SettingIcon,
+    HomeIcon,
+    MoonIcon,
+    LogoutIcon,
+    QuestionIcon,
+    LanguageIcon,
+} from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
     {
-        icon: <FontAwesomeIcon icon={faHouseFlag} />,
+        icon: <HomeIcon />,
         title: 'Công cụ dành cho nhà sáng tạo',
     },
     {
-        icon: <FontAwesomeIcon icon={faLanguage} />,
+        icon: <LanguageIcon />,
         title: 'Tiếng Việt',
         children: {
             title: 'Ngôn ngữ',
@@ -81,12 +88,12 @@ const MENU_ITEMS = [
         },
     },
     {
-        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        icon: <QuestionIcon />,
         title: 'Phản hồi và trợ giúp',
         to: '/feedback',
     },
     {
-        icon: <FontAwesomeIcon icon={faMoon} />,
+        icon: <MoonIcon />,
         title: 'Chế độ tối',
     },
 ];
@@ -114,23 +121,23 @@ function Header() {
 
     const userMenu = [
         {
-            icon: <FontAwesomeIcon icon={faUser} />,
+            icon: <UserIcon />,
             title: 'Xem hồ sơ',
             to: '/@nguyenvana',
         },
         {
-            icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+            icon: <CoinIcon />,
             title: 'Nhận xu',
             to: '/getcoin',
         },
         {
-            icon: <FontAwesomeIcon icon={faGear} />,
+            icon: <SettingIcon />,
             title: 'Cài đặt',
             to: '/setting',
         },
         ...MENU_ITEMS,
         {
-            icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
+            icon: <LogoutIcon />,
             title: 'Đăng xuất',
             to: '/logout',
             separate: true,
@@ -141,7 +148,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="TikTok" />
+                    <LogoIcon />
                 </div>
                 <HeadlessTippy
                     interactive
@@ -178,9 +185,9 @@ function Header() {
                             <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                                 Tải lên
                             </Button>
-                            <Tippy content="Hộp thư" delay={[0, 500]} placement="bottom">
+                            <Tippy content="Hộp thư" delay={[0, 50]} placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -195,7 +202,7 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/ec3d0164ffe39688f830b76da1796d52.jpeg?lk3s=a5d48078&nonce=96206&refresh_token=c8159a8fa50d50e76ccae966a30e69c0&x-expires=1736132400&x-signature=HXysMXf%2BIUo0CpiPK0JTB8mXsfU%3D&shp=a5d48078&shcp=81f88b70"
                                 className={cx('user-avatar')}
                                 alt="Nguyễn Văn A"
