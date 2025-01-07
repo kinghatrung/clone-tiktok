@@ -11,6 +11,10 @@
     padding-bottom: 8px;
 }
 
+.menu-body {
+    overflow-y: auto;
+}
+
 .menu-item {
     width: 100%;
     justify-content: flex-start;
@@ -30,6 +34,8 @@
 // Header
 .header {
     position: relative;
+    // Giữ nguyên kích thức của nó ko bị co lại
+    flex-shrink: 0;
     height: 50px;
     margin-top: -8px;
 }
