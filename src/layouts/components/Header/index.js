@@ -10,7 +10,7 @@ import Image from '~/components/Image';
 import Button from '~/components/Button';
 import Search from '../Search';
 import Menu from '~/components/Popper/Menu';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import {
     CoinIcon,
     LogoIcon,
@@ -133,7 +133,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo')}>
+                <Link to={config.routes.home} className={cx('logo')}>
                     <LogoIcon />
                 </Link>
 
