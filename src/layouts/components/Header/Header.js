@@ -165,11 +165,9 @@ function Header() {
                                 alt="Nguyễn Văn A"
                             />
                         ) : (
-                            <Tippy>
-                                <button className={cx('more-btn')}>
-                                    <FontAwesomeIcon icon={faEllipsisVertical} />
-                                </button>
-                            </Tippy>
+                            <button className={cx('more-btn')}>
+                                <FontAwesomeIcon icon={faEllipsisVertical} />
+                            </button>
                         )}
                     </Menu>
                 </div>

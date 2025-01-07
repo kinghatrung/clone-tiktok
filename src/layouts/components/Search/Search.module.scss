@@ -14,6 +14,7 @@
     input {
         flex: 1;
         height: 100%;
+        padding-right: 50px;
         font-size: 1.6rem;
         color: var(--black);
         background: transparent;
@@ -90,4 +91,8 @@
     border-bottom-right-radius: var(--search-border-radius);
     font-size: 1.8rem;
     color: rgba(22, 24, 35, 0.34);
+
+    &:active {
+        background-color: rgba(22, 24, 35, 0.03) !important;
+    }
 }

@@ -30,7 +30,25 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
-    overflow-y: overlay;
+    overflow: hidden;
+
+    // Custom tippy tooltip
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        line-height: 2.2rem;
+        font-size: 1.6rem;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: rgb(255, 255, 255);
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px;
+    }
 }
 
 // ScrollBar
@@ -50,7 +68,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.6);
 }
 
 button,
@@ -60,7 +78,7 @@ input,
     border: none;
 }
 
-a[href] {
+a {
     color: var(--text-color);
     text-decoration: none;
 }
@@ -88,24 +106,4 @@ a[href] {
     font-family: SofiaNova;
     src: url('/assets/fonts/TikTokDisplayFont-Bold.woff2');
     font-weight: 700;
-}
-
-// Custom tippy tooltip
-body {
-    .tippy-box {
-        border-radius: 8px;
-        font-weight: 600;
-        line-height: 2.2rem;
-        font-size: 1.6rem;
-        background-color: rgba(84, 84, 84, 0.92);
-        color: rgb(255, 255, 255);
-    }
-
-    .tippy-arrow {
-        color: rgba(84, 84, 84, 0.92);
-    }
-
-    .tippy-content {
-        padding: 8px;
-    }
 }
