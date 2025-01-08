@@ -14,10 +14,10 @@ import config from '~/config';
 import {
     CoinIcon,
     LogoIcon,
-    MessageIcon,
+    MailboxIcon,
     UserIcon,
     SettingIcon,
-    HomeIcon,
+    HomeFlagIcon,
     MoonIcon,
     LogoutIcon,
     QuestionIcon,
@@ -28,7 +28,7 @@ const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
     {
-        icon: <HomeIcon />,
+        icon: <HomeFlagIcon />,
         title: 'Công cụ dành cho nhà sáng tạo',
     },
     {
@@ -147,7 +147,7 @@ function Header() {
                             </Button>
                             <Tippy content="Hộp thư" delay={[0, 50]} placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <MessageIcon />
+                                    <MailboxIcon />
                                 </button>
                             </Tippy>
                         </>
