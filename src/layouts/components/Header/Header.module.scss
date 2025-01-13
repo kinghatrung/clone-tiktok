@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 0;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -44,7 +44,7 @@
 
 .more-btn {
     font-size: 2rem;
-    margin-left: 28px;
+    margin-left: 24px;
     padding: 8px;
     background-color: transparent;
     cursor: pointer;

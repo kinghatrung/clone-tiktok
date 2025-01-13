@@ -15,7 +15,7 @@ import {
     CoinIcon,
     LogoIcon,
     MailboxIcon,
-    UserIcon,
+    UserMenuIcon,
     SettingIcon,
     HomeFlagIcon,
     MoonIcon,
@@ -107,7 +107,7 @@ function Header() {
 
     const userMenu = [
         {
-            icon: <UserIcon />,
+            icon: <UserMenuIcon />,
             title: 'Xem hồ sơ',
             to: '/@nguyenvana',
         },

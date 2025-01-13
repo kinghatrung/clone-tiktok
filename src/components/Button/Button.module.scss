@@ -7,7 +7,7 @@
     font-size: 1.6rem;
     font-weight: 700;
     min-width: 100px;
-    padding: 9px 16px;
+    padding: 8px 8px;
     border-radius: 4px;
     cursor: pointer;
     background-color: var(--white);
@@ -26,7 +26,7 @@
 
 .icon + .title,
 .title + .icon {
-    margin-left: 8px;
+    margin-left: 6px;
 }
 
 .icon {
@@ -45,7 +45,7 @@
 
     &:hover {
         border-color: rgba(22, 24, 35, 0.2);
-        background-color: rgb(255, 255, 255);
+        background-color: var(--white);
     }
 }
 
@@ -56,7 +56,7 @@
 
     &:hover {
         border-color: var(--primary);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), var(--primary);
     }
 }
 
@@ -71,12 +71,13 @@
 }
 
 .text {
-    border: 1px solid rgba(22, 24, 35, 0.12);
+    border: 1px solid #1618231f;
     border-radius: 2px;
-    padding: 8px 13px;
+    padding: 8px 15px;
+    font-weight: 600;
 
     &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
+        background-color: #16182308;
     }
 }
 
@@ -89,4 +90,28 @@
 .large {
     padding: 14px 16px;
     min-width: 140px;
+}
+
+.extraLarge {
+    font-family: 'TikTokDisplay', sans-serif;
+    font-size: 1.8rem;
+    padding: 13px 8px;
+    width: 100%;
+}
+
+// type and size button download
+.download {
+    background: var(--white);
+    border: 1px solid #1618231f;
+    font-size: 1.4rem;
+    color: #161823bf;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    line-height: 30px;
+    padding: 0px 8px;
+    border-radius: 52px;
+
+    &:active {
+        border-color: #16182333;
+        background-color: #1618230f;
+    }
 }

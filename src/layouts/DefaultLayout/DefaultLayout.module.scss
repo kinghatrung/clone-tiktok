@@ -6,12 +6,24 @@
 
 .container {
     margin-top: var(--default-layout-header-height);
-    padding: 0 var(--default-layout-horizontal-spacer) 0 0;
     width: var(--default-layout-width);
     max-width: 100%;
     display: flex;
 }
 
-.content {
+.sidebar {
+    overflow-y: auto;
+}
+
+.box-content {
     flex: 1;
+}
+
+.navigation-content {
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    background-color: var(--white);
 }

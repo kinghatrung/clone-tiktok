@@ -5,6 +5,8 @@
     --black: #000;
     --white: #fff;
     --text-color: #161823;
+    --sub-color: #16182380;
+    --tick-color: #20d5ec;
 
     --font-family: 'ProximaNova', serif;
 
@@ -39,7 +41,7 @@ body {
         line-height: 2.2rem;
         font-size: 1.6rem;
         background-color: rgba(84, 84, 84, 0.92);
-        color: rgb(255, 255, 255);
+        color: var(--white);
     }
 
     .tippy-arrow {
@@ -103,7 +105,7 @@ a {
 }
 
 @font-face {
-    font-family: SofiaNova;
+    font-family: TikTokDisplay;
     src: url('/assets/fonts/TikTokDisplayFont-Bold.woff2');
     font-weight: 700;
 }

@@ -1,8 +1,11 @@
 import classNames from 'classnames/bind';
-import Header from '~/layouts/components/Header';
-import styles from './DefaultLayout.module.scss';
-import Sidebar from '~/layouts/components/Sidebar';
 import PropTypes from 'prop-types';
+
+import Sidebar from '~/layouts/components/Sidebar';
+import Header from '~/layouts/components/Header';
+import NavigationButton from '~/components/NavigationButton';
+import ButtonDownload from '~/components/Button/ButtonDownload';
+import styles from './DefaultLayout.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -11,8 +14,16 @@ function DefaultLayout({ children }) {
         <div className={cx('wrapper')}>
             <Header />
             <div className={cx('container')}>
-                <Sidebar />
-                <div className={cx('content')}>{children}</div>
+                <div className={cx('sidebar')}>
+                    <Sidebar />
+                </div>
+                <div className={cx('box-content')}>
+                    <div className={cx('navigation-content')}>
+                        <div className={cx('content')}>{children}</div>
+                        <NavigationButton />
+                    </div>
+                    <ButtonDownload />
+                </div>
             </div>
         </div>
     );

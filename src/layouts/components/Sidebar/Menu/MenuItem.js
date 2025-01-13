@@ -7,7 +7,7 @@ import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
-function MenuItem({ image = false, title, to, icon, activeIcon }) {
+function MenuItem({ image, title, to, icon, activeIcon }) {
     const renderItemMenu = (activeItem = false) => (
         <>
             {image ? (
@@ -33,7 +33,8 @@ function MenuItem({ image = false, title, to, icon, activeIcon }) {
 MenuItem.propTypes = {
     title: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired,
-    icon: PropTypes.node.isRequired,
+    icon: PropTypes.node,
+    activeIcon: PropTypes.node,
 };
 
 export default MenuItem;

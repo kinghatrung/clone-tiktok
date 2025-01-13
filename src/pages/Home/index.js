@@ -1,5 +1,7 @@
+import Video from '~/components/Video';
+
 function Home() {
-    return <h2 style={{ height: '2000px' }}>Home Page</h2>;
+    return <Video />;
 }
 
 export default Home;

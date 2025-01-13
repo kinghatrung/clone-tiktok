@@ -1,0 +1,55 @@
+.wrapper {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
+    inset-inline-end: 24px;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(22, 24, 35, 0.03);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    background-color: var(--white);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 6px 0 6px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.text {
+    font-size: 1.6rem;
+    line-height: 21px;
+    color: var(--black);
+    margin-left: 8px;
+    font-weight: 800;
+}
+
+.close {
+    display: flex;
+    outline: none;
+    cursor: pointer;
+    background: var(--white);
+    padding: 6px 6px;
+    margin: 0 8px;
+}
+
+.store-download {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
